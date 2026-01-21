@@ -1,6 +1,5 @@
 function mostrarBienvenida() {
-    alert("¡Bienvenidos al curso!");
+    alert("Bienvenidos al curso de Programación Web");
 }
-
 
 
