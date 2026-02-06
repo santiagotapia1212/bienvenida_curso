@@ -3,113 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenida al Curso</title>
+    <meta name="description" content="Página de presentación del equipo - Curso de Desarrollo de Aplicaciones Web BUAP">
+    <title>Desarrollo de Aplicaciones Web | Equipo BUAP</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenida al Curso de Desarrollo de Aplicaciones Web</h1>
-        
-        <button onclick="mostrarBienvenida()">Mensaje de Bienvenida</button>
 
-        <h2>Objetivos del Curso</h2>
-        <div class="objetivos">
-            <ul>
-                <li>Aprender los fundamentos de HTML y crear estructuras web básicas</li>
-                <li>Dominar CSS para dar estilo y diseño a las páginas web</li>
-                <li>Introducirse en JavaScript para agregar interactividad</li>
-                <li>Desarrollar un proyecto final completo aplicando todo lo aprendido</li>
-                <li>Comprender las buenas prácticas de desarrollo web</li>
-            </ul>
-        </div>
-
-        <h2>Contenido del Curso</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Módulo</th>
-                    <th>Tema</th>
-                    <th>Duración</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Introducción a HTML</td>
-                    <td>2 horas</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>CSS y Diseño Web</td>
-                    <td>3 horas</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>JavaScript Básico</td>
-                    <td>4 horas</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Proyecto Final</td>
-                    <td>5 horas</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>Integrantes del Equipo</h2>
-        <div class="integrantes">
-            <div class="integrante">
-                <h3>Santiago Tapia</h3>
-                <p><strong>Matrícula:</strong> 202357471</p>
-                <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
-                <p><strong>Email:</strong> santiago.tapia@estudiante.buap.mx</p>
-                <p><strong>Rol:</strong> Estudiante</p>
-            </div>
-
-            <div class="integrante">
-                <h3>Jennifer Cruz</h3>
-                <p><strong>Matrícula:</strong> 202337875</p>
-                <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
-                <p><strong>Email:</strong> jennifer.cruz@estudiante.buap.mx</p>
-                <p><strong>Rol:</strong> Estudiante</p>
-            </div>
-
-            <div class="integrante">
-                <h3>Ryhard Enrique</h3>
-                <p><strong>Matrícula:</strong> 202337447</p>
-                <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
-                <p><strong>Email:</strong> ryhard.enrique@estudiante.buap.mx</p>
-                <p><strong>Rol:</strong> Estudiante</p>
-            </div>
-
-            <div class="integrante">
-                <h3>Jesus Carro</h3>
-                <p><strong>Matrícula:</strong> 202112348</p>
-                <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
-                <p><strong>Email:</strong> jesus.carro@estudiante.buap.mx</p>
-                <p><strong>Rol:</strong> Estudiante</p>
-            </div>
-
-            <div class="integrante">
-                <h3>Emilio Daniel Vasquez</h3>
-                <p><strong>Matrícula:</strong> 202379202</p>
-                <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
-                <p><strong>Email:</strong> vg202379202@alm.buap.mx</p>
-                <p><strong>Rol:</strong> Estudiante</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Desarrollo de Aplicaciones Web</h1>
+                <p class="hero-subtitle">Facultad de Ciencias de la Computación | BUAP</p>
+                <p class="hero-semester">Primavera 2026</p>
             </div>
         </div>
+    </header>
 
-        <h2>Información General</h2>
-        <div class="info-general">
-            <p><strong>Institución:</strong> Benemérita Universidad Autónoma de Puebla</p>
-            <p><strong>Facultad:</strong> Facultad de Ciencias de la Computación</p>
-            <p><strong>Semestre:</strong> Primavera 2026</p>
-            <p><strong>Horario:</strong> Miércoles y Viernes 9:00 - 11:00 hrs</p>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#contenido">Contenido</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#info">Información</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <button onclick="mostrarBienvenida()" class="btn-primary">
+                <span class="btn-icon">👋</span>
+                Mostrar Mensaje de Bienvenida
+            </button>
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <!-- Objetivos Section -->
+        <section id="objetivos" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Objetivos del Curso</h2>
+                <p class="section-description">Competencias y habilidades que desarrollaremos durante el semestre</p>
+            </div>
+            <div class="objetivos-grid">
+                <div class="objetivo-card">
+                    <div class="objetivo-icon">📄</div>
+                    <h3>HTML5 Semántico</h3>
+                    <p>Dominar la estructura y semántica de HTML5 para crear páginas web accesibles y bien organizadas</p>
+                </div>
+                <div class="objetivo-card">
+                    <div class="objetivo-icon">🎨</div>
+                    <h3>CSS Avanzado</h3>
+                    <p>Aplicar estilos modernos con CSS3, incluyendo Flexbox, Grid y animaciones</p>
+                </div>
+                <div class="objetivo-card">
+                    <div class="objetivo-icon">⚡</div>
+                    <h3>JavaScript Interactivo</h3>
+                    <p>Añadir interactividad y dinamismo mediante JavaScript y manipulación del DOM</p>
+                </div>
+                <div class="objetivo-card">
+                    <div class="objetivo-icon">🚀</div>
+                    <h3>Proyecto Integral</h3>
+                    <p>Desarrollar un proyecto web completo aplicando todas las tecnologías aprendidas</p>
+                </div>
+                <div class="objetivo-card">
+                    <div class="objetivo-icon">📱</div>
+                    <h3>Diseño Responsive</h3>
+                    <p>Crear interfaces adaptables a diferentes dispositivos y tamaños de pantalla</p>
+                </div>
+                <div class="objetivo-card">
+                    <div class="objetivo-icon">✅</div>
+                    <h3>Buenas Prácticas</h3>
+                    <p>Implementar estándares web y mejores prácticas de desarrollo profesional</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido Section -->
+        <section id="contenido" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Contenido del Curso</h2>
+                <p class="section-description">Plan de estudios estructurado en módulos progresivos</p>
+            </div>
+            <div class="table-container">
+                <table class="course-table">
+                    <thead>
+                        <tr>
+                            <th>Módulo</th>
+                            <th>Tema</th>
+                            <th>Duración</th>
+                            <th>Nivel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="modulo-badge">1</span></td>
+                            <td>
+                                <strong>Introducción a HTML</strong>
+                                <p class="tema-desc">Estructura, etiquetas semánticas y formularios</p>
+                            </td>
+                            <td>2 horas</td>
+                            <td><span class="nivel-badge nivel-basico">Básico</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="modulo-badge">2</span></td>
+                            <td>
+                                <strong>CSS y Diseño Web</strong>
+                                <p class="tema-desc">Selectores, Flexbox, Grid y responsive design</p>
+                            </td>
+                            <td>3 horas</td>
+                            <td><span class="nivel-badge nivel-intermedio">Intermedio</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="modulo-badge">3</span></td>
+                            <td>
+                                <strong>JavaScript Básico</strong>
+                                <p class="tema-desc">Sintaxis, DOM, eventos y manipulación dinámica</p>
+                            </td>
+                            <td>4 horas</td>
+                            <td><span class="nivel-badge nivel-intermedio">Intermedio</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="modulo-badge">4</span></td>
+                            <td>
+                                <strong>Proyecto Final</strong>
+                                <p class="tema-desc">Aplicación web completa e integrada</p>
+                            </td>
+                            <td>5 horas</td>
+                            <td><span class="nivel-badge nivel-avanzado">Avanzado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Horas Totales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Módulos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Proyecto Final</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo Section -->
+        <section id="equipo" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <p class="section-description">Estudiantes comprometidos con la excelencia en desarrollo web</p>
+            </div>
+            <div class="team-grid">
+                
+                <article class="team-member">
+                    <div class="member-avatar">ST</div>
+                    <div class="member-info">
+                        <h3 class="member-name">Santiago Tapia</h3>
+                        <div class="member-details">
+                            <p><strong>Matrícula:</strong> 202357471</p>
+                            <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
+                            <p class="member-email">
+                                <span class="email-icon">✉️</span>
+                                santiago.tapia@estudiante.buap.mx
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-member">
+                    <div class="member-avatar">JC</div>
+                    <div class="member-info">
+                        <h3 class="member-name">Jennifer Cruz</h3>
+                        <div class="member-details">
+                            <p><strong>Matrícula:</strong> 202337875</p>
+                            <p><strong>Carrera:</strong> Ciencias de la Computación</p>
+                            <p class="member-email">
+                                <span class="email-icon">✉️</span>
+                                jennifer.cruz@estudiante.buap.mx
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-member">
+                    <div class="member-avatar">RE</div>
+                    <div class="member-info">
+                        <h3 class="member-name">Ryhard Enrique</h3>
+                        <div class="member-details">
+                            <p><strong>Matrícula:</strong> 202337447</p>
+                            <p><strong>Carrera:</strong> Ciencias de la Computación</p>
+                            <p class="member-email">
+                                <span class="email-icon">✉️</span>
+                                ryhard.enrique@estudiante.buap.mx
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-member">
+                    <div class="member-avatar">JC</div>
+                    <div class="member-info">
+                        <h3 class="member-name">Jesús Carro</h3>
+                        <div class="member-details">
+                            <p><strong>Matrícula:</strong> 202112348</p>
+                            <p><strong>Carrera:</strong> Ciencias de la Computación</p>
+                            <p class="member-email">
+                                <span class="email-icon">✉️</span>
+                                jesus.carro@estudiante.buap.mx
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-member">
+                    <div class="member-avatar">EV</div>
+                    <div class="member-info">
+                        <h3 class="member-name">Emilio Daniel Vásquez</h3>
+                        <div class="member-details">
+                            <p><strong>Matrícula:</strong> 202379202</p>
+                            <p><strong>Carrera:</strong> Ciencias de la Computación</p>
+                            <p class="member-email">
+                                <span class="email-icon">✉️</span>
+                                vg202379202@alm.buap.mx
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Información Section -->
+        <section id="info" class="section info-section">
+            <div class="info-card">
+                <h2 class="info-title">Información General del Curso</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">🏛️</div>
+                        <div>
+                            <h4>Institución</h4>
+                            <p>Benemérita Universidad Autónoma de Puebla</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">💻</div>
+                        <div>
+                            <h4>Facultad</h4>
+                            <p>Ciencias de la Computación</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📅</div>
+                        <div>
+                            <h4>Período</h4>
+                            <p>Semestre Primavera 2026</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">👥</div>
+                        <div>
+                            <h4>Integrantes</h4>
+                            <p>5 estudiantes comprometidos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2026 – Equipo de Desarrollo Web | BUAP</p>
+            <p class="footer-subtext">Facultad de Ciencias de la Computación</p>
         </div>
-    </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
